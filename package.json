@@ -1,0 +1,21 @@
+{
+  "name": "picmovi-agent-tools",
+  "private": true,
+  "version": "0.1.0",
+  "description": "PicMovi photo to video agent tools: REST client, CLI, and stdio MCP adapter.",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build -w @picmovi/agent-core && npm run build -w @picmovi/client && npm run build -w picmovi-mcp && npm run build -w picmovi-cli",
+    "test": "npm run build -w @picmovi/agent-core && node --test packages/core/dist/*.test.js",
+    "mcp": "npm run build -w @picmovi/agent-core && npm run build -w @picmovi/client && npm run build -w picmovi-mcp && node packages/mcp/dist/index.js"
+  },
+  "workspaces": [
+    "packages/core",
+    "packages/client",
+    "packages/mcp",
+    "packages/cli"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}

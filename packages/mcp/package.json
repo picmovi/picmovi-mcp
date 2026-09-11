@@ -1,0 +1,23 @@
+{
+  "name": "picmovi-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "picmovi-mcp": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.1",
+    "@picmovi/client": "0.1.0",
+    "@picmovi/agent-core": "0.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  }
+}

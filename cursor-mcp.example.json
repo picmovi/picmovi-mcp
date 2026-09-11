@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "picmovi": {
+      "command": "npx",
+      "args": ["-y", "picmovi-mcp"],
+      "env": {
+        "PICMOVI_API_KEY": "pmv_your_key_from_picmovi.com_mcp",
+        "PICMOVI_BASE_URL": "https://api.picmovi.com"
+      }
+    }
+  }
+}

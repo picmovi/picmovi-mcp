@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.picmovi/photo-to-video",
+  "description": "PicMovi photo to video MCP: make short videos from still photos. Quote credits, then generate. Local stdio uses PICMOVI_API_KEY.",
+  "title": "PicMovi Photo to Video",
+  "repository": {
+    "url": "https://github.com/picmovi/picmovi-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://picmovi.com/",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://picmovi.com/api/mcp"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "picmovi-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "PICMOVI_API_KEY",
+          "description": "PicMovi API key used by the local photo-to-video adapter.",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "PICMOVI_BASE_URL",
+          "description": "Optional PicMovi API base URL.",
+          "default": "https://api.picmovi.com"
+        }
+      ]
+    }
+  ]
+}
